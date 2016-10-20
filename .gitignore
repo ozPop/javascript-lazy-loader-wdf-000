@@ -4,3 +4,5 @@ log
 *.log
 *.swp
 .results.json
+node_modules/
+SpecRunner*
