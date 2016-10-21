@@ -24,3 +24,9 @@ end
 
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.app = app
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.javascript_driver = :chrome

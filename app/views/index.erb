@@ -2,7 +2,6 @@
   <head>
     <title>Cars</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/jquery.min.js"></script>
   </head>
   <body>
     <div class="jumbotron">
@@ -63,7 +62,20 @@
       <br>
       <br>
     </div><!-- container -->
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="js/handlebars.js"></script>
     <script src="js/cars.js"></script>
     <script src="js/on-click.js"></script>
+    <script id="cars-row" type="text/x-handlebars-template">
+      <div class="row">
+      {{#each this}}
+          <div class="col-md-4 car">
+            <h2>{{Make}}</h2>
+            <p><strong>Model:</strong> {{Model}}</p>
+            <p><strong>Year:</strong> {{Year}}</p>
+          </div>
+      {{/each}}
+      </div>
+    </script>
   </body>
 </html>
